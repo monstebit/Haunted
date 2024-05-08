@@ -1,19 +1,13 @@
 using Unity.Netcode;
 using UnityEngine;
-using UnityEngine.UI;
 
 namespace UU
 {
     public class NetworkUIManager : MonoBehaviour
     {
-        [SerializeField] private Button _hostButton;
-
-        private void Awake()
+        public void StartNetworkAsHost()
         {
-            _hostButton.onClick.AddListener(() =>
-            {
-                NetworkManager.Singleton.StartHost();
-            });
+            NetworkManager.Singleton.StartHost();
         }
     }
 }
