@@ -717,7 +717,7 @@ GameObject:
   - component: {fileID: 1673624611}
   - component: {fileID: 1673624610}
   m_Layer: 5
-  m_Name: Banner Text
+  m_Name: Title Screen Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -772,8 +772,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294967295
-  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+    rgba: 4283455744
+  m_fontColor: {r: 0, g: 0.3490566, b: 0.31184807, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -853,6 +853,7 @@ GameObject:
   - component: {fileID: 1876783087}
   - component: {fileID: 1876783086}
   - component: {fileID: 1876783090}
+  - component: {fileID: 1876783091}
   m_Layer: 5
   m_Name: Title Screen Canvas
   m_TagString: Untagged
@@ -955,7 +956,64 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe7a3430fe3f78f43bfb0bdf197c9bda, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _pressStartButton: {fileID: 1551205985}
+--- !u!114 &1876783091
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1876783085}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3b0630ee134b2fb4d81321d89503a9b8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _hostButton: {fileID: 1551205985}
+--- !u!1 &1926189374
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1926189376}
+  - component: {fileID: 1926189375}
+  m_Layer: 0
+  m_Name: Player UI Manager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1926189375
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1926189374}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 31645a4fa344db841ac8a6de03f73129, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _startGameAsClient: 0
+--- !u!4 &1926189376
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1926189374}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2027349143
 GameObject:
   m_ObjectHideFlags: 0
@@ -1173,7 +1231,7 @@ MonoBehaviour:
     EnableNetworkLogs: 1
     OldPrefabList: []
   RunInBackground: 1
-  LogLevel: 1
+  LogLevel: 0
 --- !u!4 &2097475931
 Transform:
   m_ObjectHideFlags: 0
@@ -1199,3 +1257,4 @@ SceneRoots:
   - {fileID: 924482830}
   - {fileID: 2097475931}
   - {fileID: 1876783089}
+  - {fileID: 1926189376}
