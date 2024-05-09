@@ -6,7 +6,7 @@ namespace UU
     public class TitleScreenUIManager : MonoBehaviour
     {
         //  TEMP
-        [SerializeField] private WorldNetworkUIManager _networkUIManager;
+        [SerializeField] private WorldNetworkManager _worldNetworkManager;
         [SerializeField] private WorldSaveGameManager _worldSaveGameManager;
         
         [SerializeField] private Button _pressStartButton;
@@ -16,15 +16,8 @@ namespace UU
         
         private void Start()
         {
-            if (_pressStartButton != null)
-            {
-                _pressStartButton.onClick.AddListener(OnPressStartButtonHandleClick);
-            }
-            
-            if (_startNewGameButton != null)
-            {
-                _startNewGameButton.onClick.AddListener(OnStartNewGameButtonHandleClick);
-            }
+            _pressStartButton.onClick.AddListener(OnPressStartButtonHandleClick);
+            _startNewGameButton.onClick.AddListener(OnStartNewGameButtonHandleClick);
         }
 
         private void StartWork()
@@ -42,7 +35,7 @@ namespace UU
         
         private void OnPressStartButtonHandleClick()
         {
-            _networkUIManager.StartNetworkAsHost();
+            _worldNetworkManager.StartNetworkAsHost();
             
             _pressStartButton.gameObject.SetActive(false);
             _startNewGameButton.gameObject.SetActive(true);
