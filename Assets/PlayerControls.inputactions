@@ -12,7 +12,7 @@
                     "expectedControlType": "Vector2",
                     "processors": "",
                     "interactions": "",
-                    "initialStateCheck": false
+                    "initialStateCheck": true
                 }
             ],
             "bindings": [
@@ -28,7 +28,7 @@
                     "isPartOfComposite": false
                 },
                 {
-                    "name": "up",
+                    "name": "Up",
                     "id": "7e1df8a0-a547-49ee-8c71-f4b533c6235b",
                     "path": "<Gamepad>/leftStick/up",
                     "interactions": "",
@@ -39,7 +39,7 @@
                     "isPartOfComposite": true
                 },
                 {
-                    "name": "down",
+                    "name": "Down",
                     "id": "0af7756b-2d33-44c1-9127-2e1de3b71a7d",
                     "path": "<Gamepad>/leftStick/down",
                     "interactions": "",
@@ -50,8 +50,8 @@
                     "isPartOfComposite": true
                 },
                 {
-                    "name": "left",
-                    "id": "974f6c2b-47af-495b-8d45-73c9c1e2e667",
+                    "name": "Left",
+                    "id": "1122af17-9b76-4ae5-8c09-7b1710f7c6a5",
                     "path": "<Gamepad>/leftStick/left",
                     "interactions": "",
                     "processors": "",
@@ -61,9 +61,64 @@
                     "isPartOfComposite": true
                 },
                 {
-                    "name": "right",
-                    "id": "5f4c6de4-87dc-4403-b68a-069aed31c8c8",
+                    "name": "Right",
+                    "id": "5a39769b-36fe-442f-b1f1-1fd07920bca6",
                     "path": "<Gamepad>/leftStick/right",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Movement",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "WASD",
+                    "id": "1f13e943-eed2-4bf3-b664-8bfc6191479b",
+                    "path": "2DVector",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Movement",
+                    "isComposite": true,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "Up",
+                    "id": "00882d3a-4009-4df9-b2a1-815fc0bbed57",
+                    "path": "<Keyboard>/w",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Movement",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "Down",
+                    "id": "f8ce5660-3d4b-484c-a711-9126b1fce565",
+                    "path": "<Keyboard>/s",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Movement",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "Left",
+                    "id": "3f51106b-ad3f-4e78-aa52-edb6b2ac05d9",
+                    "path": "<Keyboard>/a",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Movement",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "Right",
+                    "id": "8e5efeb4-1f72-4ea2-aea1-9a5143689db3",
+                    "path": "<Keyboard>/d",
                     "interactions": "",
                     "processors": "",
                     "groups": "",

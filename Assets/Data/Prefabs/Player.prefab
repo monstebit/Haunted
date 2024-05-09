@@ -1167,6 +1167,8 @@ GameObject:
   - component: {fileID: 5222233271179235736}
   - component: {fileID: 4636143315205911744}
   - component: {fileID: -2490610555972927931}
+  - component: {fileID: 6212928422921140392}
+  - component: {fileID: 575954615342960667}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -1225,7 +1227,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   GlobalObjectIdHash: 2322204806
-  InScenePlacedSourceGlobalObjectIdHash: 0
+  InScenePlacedSourceGlobalObjectIdHash: 2322204806
   AlwaysReplicateAsRoot: 0
   SynchronizeTransform: 1
   ActiveSceneSynchronization: 0
@@ -1245,6 +1247,44 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 149faf1f9cf73854fa45710e399f915d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &6212928422921140392
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5094487160487605137}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 26490f26eff7dac44959c6b0aea6699f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!143 &575954615342960667
+CharacterController:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5094487160487605137}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Height: 1.85
+  m_Radius: 0.23
+  m_SlopeLimit: 45
+  m_StepOffset: 0.3
+  m_SkinWidth: 0.08
+  m_MinMoveDistance: 0.001
+  m_Center: {x: 0, y: 1, z: 0}
 --- !u!1 &5181656427807828315
 GameObject:
   m_ObjectHideFlags: 0
