@@ -15,7 +15,8 @@ namespace UU
             _states = new List<IState>()
             {
                 new IdlingState(this, playerInputManager, data),
-                new RunningState(this, playerInputManager, data)
+                new WalkingState(this, playerInputManager, data),
+                new SprintingState(this, playerInputManager, data),
             };
 
             _currentState = _states[0];

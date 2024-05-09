@@ -1,6 +1,5 @@
 using System;
 using UnityEngine;
-using UnityEngine.Serialization;
 
 namespace UU
 {
@@ -8,19 +7,21 @@ namespace UU
     {
         public float verticalMovement;
         public float horizontalMovement;
-
-        //  TEMP
-        public Vector2 CameratInput;
-        public float CameraHorizontalInput;
-        public float CameraVerticalInput;
         
-        //  UU
+        //  CONFIGS?
+            //  PLAYER CAMERA
+        public Vector2 CameratInput;
+        private float CameraHorizontalInput;
+        private float CameraVerticalInput;
+        
+            //  PLAYER MOVEMENT
         public Vector2 MovementInput;
         public float RotationSpeed = 5f;
         
         private float _moveAmount;
-        private float _walkingSpeed;
-        private float _runningSpeed ;
+        // private float _walkingSpeed = 2f;
+        // private float _sprintingSpeed = 5f;
+        private float _speed;
         
         private float _verticalInput;
         private float _horizontalInput;
@@ -61,27 +62,39 @@ namespace UU
             }
         }
         
-        public float RunningSpeed
+        // public float SprintingSpeed
+        // {
+        //     get => _sprintingSpeed;
+        //     set
+        //     {
+        //         if (value < 0)
+        //             throw new ArgumentOutOfRangeException(nameof(value));
+        //
+        //         _sprintingSpeed = value;
+        //     }
+        // }
+        
+        // public float WalkingSpeed
+        // {
+        //     get => _walkingSpeed;
+        //     set
+        //     {
+        //         if (value < 0)
+        //             throw new ArgumentOutOfRangeException(nameof(value));
+        //
+        //         _walkingSpeed = value;
+        //     }
+        // }
+        
+        public float Speed
         {
-            get => _runningSpeed;
+            get => _speed;
             set
             {
                 if (value < 0)
                     throw new ArgumentOutOfRangeException(nameof(value));
         
-                _runningSpeed = value;
-            }
-        }
-        
-        public float WalkingSpeed
-        {
-            get => _walkingSpeed;
-            set
-            {
-                if (value < 0)
-                    throw new ArgumentOutOfRangeException(nameof(value));
-        
-                _walkingSpeed = value;
+                _speed = value;
             }
         }
     }

@@ -5,8 +5,9 @@ namespace UU
     [RequireComponent(typeof(CharacterController))]
     public class PlayerInputManager : MonoBehaviour //  PlayerInputManager ПЕРЕИМЕНОВАТЬ?
     {
-        //  TEMP
-        [Header("CAMERA MOVEMENT INPUT")]
+        [SerializeField] private PlayerConfig _playerConfig;
+        
+        //  PLAYER CAMERA
         private Camera _playerCamera;
         
         private PlayerControls _playerControls;
@@ -15,6 +16,7 @@ namespace UU
 
         public PlayerControls PlayerControls => _playerControls;
         public CharacterController CharacterController => _characterController;
+        public PlayerConfig PlayerConfig => _playerConfig;
 
         private void Awake()
         {
