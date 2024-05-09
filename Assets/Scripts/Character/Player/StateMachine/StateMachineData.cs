@@ -8,19 +8,16 @@ namespace UU
         public float verticalMovement;
         public float horizontalMovement;
         
-        //  CONFIGS?
-            //  PLAYER CAMERA
+        //  PLAYER CAMERA
         public Vector2 CameratInput;
-        private float CameraHorizontalInput;
-        private float CameraVerticalInput;
+        private float CameraHorizontalInput;    //  CONFIG?
+        private float CameraVerticalInput;      //  CONFIG?
         
-            //  PLAYER MOVEMENT
+        //  PLAYER MOVEMENT
         public Vector2 MovementInput;
-        public float RotationSpeed = 5f;
+        public float RotationSpeed = 5f;        //  CONFIG?
         
         private float _moveAmount;
-        // private float _walkingSpeed = 2f;
-        // private float _sprintingSpeed = 5f;
         private float _speed;
         
         private float _verticalInput;
@@ -61,30 +58,6 @@ namespace UU
                 _moveAmount = value;
             }
         }
-        
-        // public float SprintingSpeed
-        // {
-        //     get => _sprintingSpeed;
-        //     set
-        //     {
-        //         if (value < 0)
-        //             throw new ArgumentOutOfRangeException(nameof(value));
-        //
-        //         _sprintingSpeed = value;
-        //     }
-        // }
-        
-        // public float WalkingSpeed
-        // {
-        //     get => _walkingSpeed;
-        //     set
-        //     {
-        //         if (value < 0)
-        //             throw new ArgumentOutOfRangeException(nameof(value));
-        //
-        //         _walkingSpeed = value;
-        //     }
-        // }
         
         public float Speed
         {
