@@ -3,7 +3,7 @@ using UnityEngine;
 
 namespace UU
 {
-    public class NetworkUIManager : MonoBehaviour
+    public class WorldNetworkUIManager : MonoBehaviour
     {
         public void StartNetworkAsHost()
         {

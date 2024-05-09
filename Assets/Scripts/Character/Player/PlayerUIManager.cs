@@ -5,7 +5,6 @@ namespace UU
 {
     public class PlayerUIManager : MonoBehaviour
     {
-        [Header("NETWORK JOIN")] 
         [SerializeField] private bool _startGameAsClient;
         
         private void Start()
@@ -13,7 +12,7 @@ namespace UU
             DontDestroyOnLoad(gameObject);
         }
         
-        //  ПРИСОЕДИНИТЬСЯ К ХОСУ КАК КЛИЕНТ
+        //  ПРИСОЕДИНИТЬСЯ К ХОСТУ КАК КЛИЕНТ
         private void Update()
         {
             if (_startGameAsClient)

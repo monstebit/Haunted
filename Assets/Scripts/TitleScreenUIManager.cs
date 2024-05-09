@@ -6,7 +6,7 @@ namespace UU
     public class TitleScreenUIManager : MonoBehaviour
     {
         //  TEMP
-        [SerializeField] private NetworkUIManager _networkUIManager;
+        [SerializeField] private WorldNetworkUIManager _networkUIManager;
         [SerializeField] private WorldSaveGameManager _worldSaveGameManager;
         
         [SerializeField] private Button _pressStartButton;
