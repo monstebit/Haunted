@@ -53,33 +53,21 @@ namespace UU
         public virtual void Update()
         {
             Vector3 moveDirection = GetMovementDirection();
+            moveDirection.Normalize();
             
-            // MovePlayer(moveDirection);
             CharacterController.Move(moveDirection * Data.Speed * Time.deltaTime);
             
             _playerInputManager.transform.rotation = GetRotationFrom(moveDirection);
         }
 
         protected bool IsMovementInputZero() => Data.MovementInput == Vector2.zero;
-        // protected bool IsPlayerWalking() => Data.MoveAmount <= 0.5f;
+        // protected bool IsPlayerWalking() => Data.MoveAmount > 0 && Data.MoveAmount <= 0.5f;
         protected bool IsPlayerSprinting() => Data.MoveAmount > 0.5f;
         
         private Vector2 ReadInput() => PlayerControls.PlayerMovement.Movement.ReadValue<Vector2>();
         
         //  КОРРЕКТНО ЛИ y = 0?
         private Vector3 GetMovementDirection() => new Vector3(Data.horizontalMovement, 0, Data.verticalMovement);
-        
-        // private void MovePlayer(Vector3 moveDirection)
-        // {
-        //     if (IsPlayerWalking())
-        //     {
-        //         CharacterController.Move(moveDirection * Data.WalkingSpeed * Time.deltaTime);
-        //     }
-        //     else if (IsPlayerSprinting())
-        //     {
-        //         CharacterController.Move(moveDirection * Data.SprintingSpeed * Time.deltaTime);
-        //     }
-        // }
         
         private Quaternion GetRotationFrom(Vector3 direction)
         {
