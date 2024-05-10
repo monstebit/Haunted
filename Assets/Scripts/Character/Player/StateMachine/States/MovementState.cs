@@ -18,12 +18,12 @@ namespace UU
         
         protected PlayerControls PlayerControls => _playerInputManager.PlayerControls;
         protected CharacterController CharacterController => _playerInputManager.CharacterController;
+        protected PlayerView PlayerView => _playerInputManager.PlayerView;
         
         public virtual void Enter()
         {
             //  ВЫВОД ТИПА НАСЛЕДНИКА (В КАКОМ STATE МЫ СЕЙЧАС НАХОДИМСЯ)
-            Debug.Log(GetType());
-            Debug.Log(Data.Speed);
+            // Debug.Log(GetType());
         }
 
         public virtual void Exit() { }

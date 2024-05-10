@@ -15,8 +15,17 @@ namespace UU
             base.Enter();
             
             Data.Speed = _walkingStateConfig.WalkingSpeed;
+            
+            PlayerView.StartWalking();
         }
-        
+
+        public override void Exit()
+        {
+            base.Exit();
+            
+            PlayerView.StopWalking();
+        }
+
         public override void Update()
         {
             base.Update();

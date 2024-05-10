@@ -6,6 +6,7 @@ namespace UU
     public class PlayerInputManager : MonoBehaviour //  PlayerInputManager ПЕРЕИМЕНОВАТЬ?
     {
         [SerializeField] private PlayerConfig _playerConfig;
+        [SerializeField] private PlayerView _playerView;
         
         //  PLAYER CAMERA
         private Camera _playerCamera;
@@ -17,9 +18,12 @@ namespace UU
         public PlayerControls PlayerControls => _playerControls;
         public CharacterController CharacterController => _characterController;
         public PlayerConfig PlayerConfig => _playerConfig;
+        public PlayerView PlayerView => _playerView;
 
         private void Awake()
         {
+            PlayerView.Initialize();
+            
             _characterController = GetComponent<CharacterController>();
             
             _playerControls = new PlayerControls();

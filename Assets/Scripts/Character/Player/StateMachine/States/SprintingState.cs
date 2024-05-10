@@ -15,6 +15,15 @@ namespace UU
             base.Enter();
 
             Data.Speed = _sprintingStateConfig.SprintingSpeed;
+            
+            PlayerView.StartSprinting();
+        }
+
+        public override void Exit()
+        {
+            base.Exit();
+            
+            PlayerView.StopSprinting();
         }
 
         public override void Update()

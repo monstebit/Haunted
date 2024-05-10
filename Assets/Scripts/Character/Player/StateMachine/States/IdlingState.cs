@@ -9,6 +9,20 @@ namespace UU
         {
         }
 
+        public override void Enter()
+        {
+            base.Enter();
+            
+            PlayerView.StartIdling();
+        }
+
+        public override void Exit()
+        {
+            base.Exit();
+            
+            PlayerView.StopIdling();
+        }
+
         public override void Update()
         {
             base.Update();
