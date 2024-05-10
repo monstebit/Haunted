@@ -3,12 +3,12 @@ using System.Linq;
 
 namespace UU
 {
-    public class CharacterStateMachine : IStateSwitcher
+    public class PlayerStateMachine : IStateSwitcher
     {
         private List<IState> _states;
         private IState _currentState;
 
-        public CharacterStateMachine(PlayerInputManager playerInputManager)
+        public PlayerStateMachine(PlayerInputManager playerInputManager)
         {
             StateMachineData data = new StateMachineData();
             

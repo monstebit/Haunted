@@ -11,7 +11,7 @@ namespace UU
         private Camera _playerCamera;
         
         private PlayerControls _playerControls;
-        private CharacterStateMachine _characterStateMachine;
+        private PlayerStateMachine _playerStateMachine;
         private CharacterController _characterController;
 
         public PlayerControls PlayerControls => _playerControls;
@@ -23,13 +23,13 @@ namespace UU
             _characterController = GetComponent<CharacterController>();
             
             _playerControls = new PlayerControls();
-            _characterStateMachine = new CharacterStateMachine(this);
+            _playerStateMachine = new PlayerStateMachine(this);
         }
 
         private void Update()
         {
-            _characterStateMachine.HandleInput();
-            _characterStateMachine.Update();
+            _playerStateMachine.HandleInput();
+            _playerStateMachine.Update();
         }
 
         private void OnEnable() => _playerControls.Enable();
