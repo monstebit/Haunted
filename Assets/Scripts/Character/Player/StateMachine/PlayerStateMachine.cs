@@ -34,9 +34,11 @@ namespace UU
             //  ВХОДИМ В НОВОЕ СОСТОЯНИЕ
             _currentState.Enter();
         }
-
+        
         public void HandleInput() => _currentState.HandleInput();
         
         public void Update() => _currentState.Update();
+
+        public void LateUpdate() => _currentState.LateUpdate();
     } 
 }

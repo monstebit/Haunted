@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: PlayerConfig
   m_EditorClassIdentifier: 
   _walkingStateConfig:
-    _walkingSpeed: 3
+    _walkingSpeed: 2
   _sprintingStateConfig:
-    _sprintingSpeed: 6
+    _sprintingSpeed: 5

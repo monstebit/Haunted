@@ -8,7 +8,7 @@ namespace UU
             StateMachineData data) : base(stateSwitcher, playerInputManager, data)
         {
         }
-
+        
         public override void Enter()
         {
             base.Enter();
@@ -27,10 +27,22 @@ namespace UU
         {
             base.Update();
             
-            if (IsMovementInputZero())
+            if (IsPlayerWalking())
+            {
+                StateSwitcher.SwitchState<WalkingState>();
                 return;
+            }
             
-            StateSwitcher.SwitchState<WalkingState>();
+            if (IsPlayerSprinting())
+            {
+                StateSwitcher.SwitchState<SprintingState>();
+                return;
+            }
+        }
+
+        public override void LateUpdate()
+        {
+            base.LateUpdate();
         }
     }
 }

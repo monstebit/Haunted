@@ -6,5 +6,6 @@ namespace UU
         void Exit();
         void HandleInput();
         void Update();
+        void LateUpdate();
     }
 }

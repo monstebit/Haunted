@@ -5,31 +5,29 @@ namespace UU
 {
     public class StateMachineData : MonoBehaviour
     {
-        public float verticalMovement;
-        public float horizontalMovement;
+        //  MOVEMENT
+        public float RotationSpeed = 5f;
         
-        //  PLAYER CAMERA
-        public Vector2 CameratInput;
-        private float CameraHorizontalInput;    //  CONFIG?
-        private float CameraVerticalInput;      //  CONFIG?
-        
-        //  PLAYER MOVEMENT
         public Vector2 MovementInput;
-        public float RotationSpeed = 5f;        //  CONFIG?
+        private float _verticalInput;
+        private float _horizontalInput;
+        
+        //  CAMERA
+        public Vector2 CameraInput;
+        private float _cameraVerticalInput;
+        private float _cameraHorizontalInput;
         
         private float _moveAmount;
         private float _speed;
         
-        private float _verticalInput;
-        private float _horizontalInput;
-        
+        //  MOVEMENT
         public float VerticalInput
         {
             get => _verticalInput;
             set
             {
-                if (value < -1 || value > 1)
-                    throw new ArgumentOutOfRangeException(nameof(value));
+                // if (value < -1 || value > 1)
+                //     throw new ArgumentOutOfRangeException(nameof(value));
         
                 _verticalInput = value;
             }
@@ -40,13 +38,39 @@ namespace UU
             get => _horizontalInput;
             set
             {
-                if (value < -1 || value > 1)
-                    throw new ArgumentOutOfRangeException(nameof(value));
+                // if (value < -1 || value > 1)
+                //     throw new ArgumentOutOfRangeException(nameof(value));
         
                 _horizontalInput = value;
             }
         }
         
+        //  CAMERA
+        public float CameraVerticalInput
+        {
+            get => _cameraVerticalInput;
+            set
+            {
+                // if (value < -1 || value > 1)
+                //     throw new ArgumentOutOfRangeException(nameof(value));
+        
+                _cameraVerticalInput = value;
+            }
+        }
+        
+        public float CameraHorizontalInput
+        {
+            get => _cameraHorizontalInput;
+            set
+            {
+                // if (value < -1 || value > 1)
+                //     throw new ArgumentOutOfRangeException(nameof(value));
+        
+                _cameraHorizontalInput = value;
+            }
+        }
+        
+        //  ПАРАМЕТРЫ
         public float MoveAmount
         {
             get => _moveAmount;

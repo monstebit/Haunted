@@ -9,7 +9,7 @@ namespace UU
             PlayerInputManager playerInputManager,
             StateMachineData data) : base(stateSwitcher, playerInputManager, data)
             => _sprintingStateConfig = playerInputManager.PlayerConfig.SprintingStateConfig;
-
+        
         public override void Enter()
         {
             base.Enter();
@@ -30,8 +30,27 @@ namespace UU
         {
             base.Update();
         
-            if (IsMovementInputZero())
+            if (IsPlayerWalking())
+            {
                 StateSwitcher.SwitchState<WalkingState>();
+                return;
+            }
+            
+            if (IsPlayerSprinting())
+            {
+                StateSwitcher.SwitchState<SprintingState>();
+                return;
+            }
+            
+            StateSwitcher.SwitchState<IdlingState>();
+            
+            // if (IsMovementInputZero())
+            //     StateSwitcher.SwitchState<WalkingState>();
+        }
+        
+        public override void LateUpdate()
+        {
+            base.LateUpdate();
         }
     }
 }
