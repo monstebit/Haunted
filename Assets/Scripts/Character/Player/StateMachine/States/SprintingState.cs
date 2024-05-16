@@ -30,22 +30,14 @@ namespace UU
         {
             base.Update();
         
-            if (IsPlayerWalking())
+            if (!IsPlayerSprinting())
             {
                 StateSwitcher.SwitchState<WalkingState>();
-                return;
             }
-            
-            if (IsPlayerSprinting())
+            else if (IsPlayerWalking())
             {
-                StateSwitcher.SwitchState<SprintingState>();
-                return;
+                StateSwitcher.SwitchState<IdlingState>();
             }
-            
-            StateSwitcher.SwitchState<IdlingState>();
-            
-            // if (IsMovementInputZero())
-            //     StateSwitcher.SwitchState<WalkingState>();
         }
         
         public override void LateUpdate()

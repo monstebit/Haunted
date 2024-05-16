@@ -26,17 +26,14 @@ namespace UU
         public override void Update()
         {
             base.Update();
-            
+
             if (IsPlayerWalking())
             {
                 StateSwitcher.SwitchState<WalkingState>();
-                return;
             }
-            
-            if (IsPlayerSprinting())
+            else if (IsPlayerSprinting())
             {
                 StateSwitcher.SwitchState<SprintingState>();
-                return;
             }
         }
 

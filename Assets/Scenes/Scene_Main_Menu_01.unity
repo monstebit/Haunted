@@ -1599,9 +1599,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   CameraObject: {fileID: 598081379600883433}
   _cameraPivotTransform: {fileID: 563444093670108639}
-  minimumPivot: -30
-  maximumPivot: 60
-  leftAndRightRotationSpeed: 200
+  leftAndRightRotationSpeed: 10
   upAndDownLookAngle: 60
   leftAndRightLookAngle: 60
 --- !u!4 &563444093670108639

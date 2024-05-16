@@ -9,11 +9,13 @@ namespace UU
         public Camera CameraObject;
         
         [SerializeField] public Transform _cameraPivotTransform;
-        public float minimumPivot = -30;
-        public float maximumPivot = 60;
+        // public float minimumPivot = -30;
+        // public float maximumPivot = 60;
         public float leftAndRightRotationSpeed = 1;
         public float upAndDownLookAngle;
+        // public Quaternion upAndDownLookAngle;
         public float leftAndRightLookAngle;
+        // public Quaternion leftAndRightLookAngle;
 
         private void Awake()
         {
